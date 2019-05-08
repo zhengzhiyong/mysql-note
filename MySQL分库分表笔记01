@@ -1,13 +1,13 @@
-µÚÒ»²½£º°²×°mysqlÊý¾Ý£¨´Ë´¦ÂÔ¹ý£©
-µÚ¶þ²¿£º°²×°mycat¡£È¥¹ÙÍøÏÂÔØÏà¹Ø°æ±¾.
-        ×¢Òâ£º´Ë´¦µ±Ê±ÎÒÓÃµÄÊÇ1.6°æ±¾µÄmycat µ±Ê±Óöµ½µ¥¿â·Ö±í³öÏÖÎÊÌâ£¬ºóÃæÖØÐÂÏÂÀ´ÁË1.6.5°æ±¾mycatÀ´×ö²Ù×÷µÄ¡£
-				ÅäÖÃmycat»·¾³±äÁ¿¡£
-				1¡¢vim /etc/profile
-				2¡¢
+ç¬¬ä¸€æ­¥ï¼šå®‰è£…mysqlæ•°æ®ï¼ˆæ­¤å¤„ç•¥è¿‡ï¼‰
+ç¬¬äºŒéƒ¨ï¼šå®‰è£…mycatã€‚åŽ»å®˜ç½‘ä¸‹è½½ç›¸å…³ç‰ˆæœ¬.
+        æ³¨æ„ï¼šæ­¤å¤„å½“æ—¶æˆ‘ç”¨çš„æ˜¯1.6ç‰ˆæœ¬çš„mycat å½“æ—¶é‡åˆ°å•åº“åˆ†è¡¨å‡ºçŽ°é—®é¢˜ï¼ŒåŽé¢é‡æ–°ä¸‹æ¥äº†1.6.5ç‰ˆæœ¬mycatæ¥åšæ“ä½œçš„ã€‚
+				é…ç½®mycatçŽ¯å¢ƒå˜é‡ã€‚
+				1ã€vim /etc/profile
+				2ã€
 				export MYCAT_HOME=/usr/mycat
 				export PATH=${MYCAT_HOME}/bin:$PATH
-				3¡¢ÔÚ/etc/profileÖÐÌí¼Ó»·¾³±äÁ¿ºó£¬Ê¹ÓÃsource /etc/profile Ë¢ÐÂ»·¾³±äÁ¿£¬ÈÃmycat»·¾³±äÁ¿Á¢¼´ÉúÐ§¡£
-				4¡¢ÐÞ¸Ä configÄ¿Â¼ÏÂserver.xml¡¢rule.xml¡¢schema.xml¶ÔÓ¦µÄÈý¸öÅäÖÃÎÄ¼þ¡££¨´Ë´¦ÎÒÃ»ÓÐÐÞ¸Äserver.xml£¬rule.xmlºÍschema.xmlÕâÀïÖ»±£ÁôÁËÐÞ¸ÄºóµÄÎÄ¼þ£©				
+				3ã€åœ¨/etc/profileä¸­æ·»åŠ çŽ¯å¢ƒå˜é‡åŽï¼Œä½¿ç”¨source /etc/profile åˆ·æ–°çŽ¯å¢ƒå˜é‡ï¼Œè®©mycatçŽ¯å¢ƒå˜é‡ç«‹å³ç”Ÿæ•ˆã€‚
+				4ã€ä¿®æ”¹ configç›®å½•ä¸‹server.xmlã€rule.xmlã€schema.xmlå¯¹åº”çš„ä¸‰ä¸ªé…ç½®æ–‡ä»¶ã€‚ï¼ˆæ­¤å¤„æˆ‘æ²¡æœ‰ä¿®æ”¹server.xmlï¼Œrule.xmlå’Œschema.xmlè¿™é‡Œåªä¿ç•™äº†ä¿®æ”¹åŽçš„æ–‡ä»¶ï¼‰				
 ################################################[rule.xml]###########################################################################
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mycat:rule SYSTEM "rule.dtd">
@@ -34,7 +34,7 @@
                 <property name="count">2</property>
         </function>
 </mycat:rule>
-##############################################¡¾schema.xml¡¿#############################################################################
+##############################################ã€schema.xmlã€‘#############################################################################
 <?xml version="1.0"?>
 <!DOCTYPE mycat:schema SYSTEM "schema.dtd">
 <mycat:schema xmlns:mycat="http://io.mycat/">
@@ -53,21 +53,21 @@
 </mycat:schema>
 ###########################################################################################################################
 
-./bin/mycat console ÓÃÀ´²é¿´´íÎó
-./bin/mycat start ÓÃÀ´Æô¶¯mycat
-./bin/mycat stop ÓÃÀ´Í£Ö¹mycat
-./bin/mycat restart ÓÃÀ´ÖØÆômycat
+./bin/mycat console ç”¨æ¥æŸ¥çœ‹é”™è¯¯
+./bin/mycat start ç”¨æ¥å¯åŠ¨mycat
+./bin/mycat stop ç”¨æ¥åœæ­¢mycat
+./bin/mycat restart ç”¨æ¥é‡å¯mycat
 
 
- mysql -uroot -p123456 -h127.0.0.1 -P8066 -DTESTDB ÓÃÀ´µÇÂ¼mycat¼¯Èº¿Í»§¶Ë
+ mysql -uroot -p123456 -h127.0.0.1 -P8066 -DTESTDB ç”¨æ¥ç™»å½•mycaté›†ç¾¤å®¢æˆ·ç«¯
  
- µÚÈý²¿£ºÖ´ÐÐ½Å±¾´´½¨Êý¾Ý¡¢²åÈëÊý¾Ý¡¢·ÖÎöÖ´ÐÐ¼Æ»®¡¢²é¿´Ö´ÐÐ½á¹û
+ ç¬¬ä¸‰éƒ¨ï¼šæ‰§è¡Œè„šæœ¬åˆ›å»ºæ•°æ®ã€æ’å…¥æ•°æ®ã€åˆ†æžæ‰§è¡Œè®¡åˆ’ã€æŸ¥çœ‹æ‰§è¡Œç»“æžœ
 
--- ·Ö±ð´´½¨Èý¸öÊý¾Ý¿â db01¡¢db02¡¢db03
+-- åˆ†åˆ«åˆ›å»ºä¸‰ä¸ªæ•°æ®åº“ db01ã€db02ã€db03
 CREATE DATABASE db01;
 CREATE DATABASE db02;
 CREATE DATABASE db03;
--- ·Ö±ðÔÚ db01¡¢db02¡¢db03 ÖÐ´´½¨users±í£¬ÓÃÀ´Ä£Äâ·Ö¿â·Ö±í²Ù×÷
+-- åˆ†åˆ«åœ¨ db01ã€db02ã€db03 ä¸­åˆ›å»ºusersè¡¨ï¼Œç”¨æ¥æ¨¡æ‹Ÿåˆ†åº“åˆ†è¡¨æ“ä½œ
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) ,
@@ -75,14 +75,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
--- ·Ö±ðÔÚ db01¡¢db02ÖÐ´´½¨item±í£¬ÓÃÀ´Ä£Äâ·Ö¿â·Ö±í²Ù×÷
+-- åˆ†åˆ«åœ¨ db01ã€db02ä¸­åˆ›å»ºitemè¡¨ï¼Œç”¨æ¥æ¨¡æ‹Ÿåˆ†åº“åˆ†è¡¨æ“ä½œ
 CREATE TABLE `item` (
   `id` int(11) NOT NULL,
   `name` varchar(255) ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ·Ö±ðÔÚ db01 ÖÐ´´½¨orders1¡¢orders2¡¢orders3 ÈýÕÅ±í£¬ÓÃÀ´Ä£Äâµ¥¿â·Ö±í²Ù×÷
+-- åˆ†åˆ«åœ¨ db01 ä¸­åˆ›å»ºorders1ã€orders2ã€orders3 ä¸‰å¼ è¡¨ï¼Œç”¨æ¥æ¨¡æ‹Ÿå•åº“åˆ†è¡¨æ“ä½œ
 CREATE TABLE `orders1` (
   `id` int(11) NOT NULL,
   `name` varchar(255) ,
@@ -101,7 +101,7 @@ CREATE TABLE `orders3` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Ö´ÐÐÏÂÃæ²åÈëÓï¾ä
+-- æ‰§è¡Œä¸‹é¢æ’å…¥è¯­å¥
 INSERT INTO item (id,NAME) VALUES(1,'zhangsan');
 INSERT INTO item (id,NAME) VALUES(2,'lisi');
 
@@ -113,7 +113,7 @@ INSERT INTO orders (id,NAME) VALUES(1,'zhangsan');
 INSERT INTO orders (id,NAME) VALUES(2,'lisi');
 INSERT INTO orders (id,NAME) VALUES(3,'wangwu');
 
--- ²é¿´Ö´ÐÐ¼Æ»®ºÍ½á¹û
+-- æŸ¥çœ‹æ‰§è¡Œè®¡åˆ’å’Œç»“æžœ
 EXPLAIN SELECT * FROM item;
 SELECT * FROM item;
 
